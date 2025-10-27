@@ -16,24 +16,19 @@ This tool provides WiFi management capabilities:
 
 It uses native macOS frameworks instead of command-line utilities, so no external dependencies required.
 
-## Running
-
-I intentionally do not build or ship a binary to avoid macOS Location Services permission prompts and code-signing/notarization hassles. Run the tool directly with the Swift interpreter instead.
-
-```bash
-# From the repository root
-cd wifi-cli
-
-# Show help
-swift wifi-cli.swift --help
-
-# Example: scan for networks
-swift wifi-cli.swift scan
-```
-
 ## Installation
 
-Installation simply copies the script into a directory on your PATH; it does not build a binary or perform code signing/notarization.
+Installation simply copies the script into a directory on your PATH.
+
+I intentionally do not build or ship a binary to avoid macOS Location Services permission prompts and code-signing/notarization hassles. The tool runs directly with the Swift interpreter instead.
+
+### Using Homebrew
+
+```bash
+brew install rgeraskin/homebrew/wifi-cli
+```
+
+### Manual Installation
 
 ```bash
 # Install to /usr/local/bin (default PREFIX)
@@ -41,12 +36,6 @@ make install
 
 # Or specify a custom installation path
 PREFIX=~/.local make install
-```
-
-### Uninstall
-
-```bash
-make uninstall
 ```
 
 ## Usage
